@@ -14,7 +14,7 @@ Two versions exist:
 
 Out of the box no, unless perhaps you're using a language that supports it directly such as Lua. The Lua interpreter has a powerful coroutine library that allows one to mimic the concept of many threads without actually spawning native OS threads. Go has a similar ability called `goroutines` which are also lightweight threads but they get mapped over multiple OS scheduled threads to maximize CPU core usage.
 
-There's always a trade-off however, with something like `goroutines`; these are preemtible + scheduled over many native threads so you have to be conscious of data-races and how work gets synchronized.
+There's always a trade-off however, with something like `goroutines`; these are preemptible + scheduled over many native threads so you have to be conscious of data-races and how work gets synchronized.
 
 Although Go and Lua are powerful, Go's flavor of concurrency is not what I want and Lua is a scripting language which can be slow. (Not LuaJit - see Love2D).
 
